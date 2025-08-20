@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Form</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome Back!</h1>
+    </header>
+
+    <main>
+      <!-- Create your form here -->
+      <form id="loginForm" name="loginForm" method="post" action="/submit">
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" required>
+
+          <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" required>
+
+          <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+          <label for="DoB">Date of Birth:</label>
+            <input type="date" name="DoB" id="DoB">
+        </fieldset>
+
+          <button type="submit">Submit</button>
+      </form>
+
+
+
+    </main>
+
+    <footer>
+      <p>Don't have an account? Sign up today!</p>
+    </footer>
+
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        console.log('Login form submitted:');
+        for (let [key, value] of formData.entries()) {
+          console.log(key + ': ' + value);
+        }
+      });
+    </script>
+  </body>
+</html>
