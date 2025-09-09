@@ -13,22 +13,21 @@
       <!-- Create your form here -->
       <form id="loginForm" name="loginForm" method="post" action="/submit">
         <fieldset>
-          <legend>Personal Details</legend>
+          <legend>Login</legend>
 
-          <label for="firstName">First Name:</label>
-            <input type="text" name="firstName" id="firstName" required>
+          <label for="username">User Name:</label>
+            <input type="text" name="username" id="username" required>
 
-          <label for="lastName">Last Name:</label>
-            <input type="text" name="lastName" id="lastName" required>
+          <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
 
-          <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
-
-          <label for="DoB">Date of Birth:</label>
-            <input type="date" name="DoB" id="DoB">
+          <label for="remember">Remember Me</label>
+              <input type="checkbox" name="remember" id="remember">
         </fieldset>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Log In</button>
+          <button type="reset">Clear</button>
+
       </form>
 
 
